@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_view">
+        <TextView
+            android:id="@+id/city_text"
+            android:layout_centerHorizontal="true"
+            style="@style/TextView"/>
+
+        <TextView
+            android:id="@+id/weather_condition"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/city_text"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            style="@style/TextView"/>
+
+        <TextView
+            android:id="@+id/temp_text"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/weather_condition"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            style="@style/TextView"/>
+
+        <TextView
+            android:id="@+id/humidity_text"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/temp_text"
+            android:textColor="@color/colorAccent"
+            style="@style/TextView"/>
+
+        <TextView
+            android:id="@+id/wind_text"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/humidity_text"
+            android:textColor="@color/colorAccent"
+            style="@style/TextView"/>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_view"
+        android:hint="enter the city"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_text"
+        android:text="Submit"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Get Info for Another City"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+
